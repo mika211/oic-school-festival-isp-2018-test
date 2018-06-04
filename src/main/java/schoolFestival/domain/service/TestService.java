@@ -2,10 +2,20 @@ package schoolFestival.domain.service;
 
 import java.util.List;
 
-import schoolFestival.domain.model.StudentEntity;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
-public interface TestService {
+import schoolFestival.domain.model.Student;
+import schoolFestival.domain.repository.StudentRepository;
 
-	List<StudentEntity> findAllStudent();
+@Service
+public class TestService {
+	
+	@Autowired
+	StudentRepository studentRepository;
+
+	public List<Student> findAllStudent() {
+		return studentRepository.findAll();
+	}
 	
 }
