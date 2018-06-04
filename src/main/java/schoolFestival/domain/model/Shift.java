@@ -30,7 +30,7 @@ public class Shift implements Serializable {
 	private Integer id;
 	
 	/** 学生 */
-	@ManyToOne
+//	@ManyToOne
 	private Student student;
 
 	/** 開始日時 */
