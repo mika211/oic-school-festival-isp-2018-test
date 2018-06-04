@@ -18,12 +18,13 @@ public class TestController {
 	
 	@RequestMapping
 	public String findAllStudent() {
-		List<Student> list = testService.findAllStudent();
-		StringBuilder text = new StringBuilder();
-		for (Student student : list) {
-			text.append(student.toString());
-			text.append("<br>");
-		}
-		return text.toString();
+//		List<Student> list = testService.findAllStudent();
+//		StringBuilder text = new StringBuilder();
+//		for (Student student : list) {
+//			text.append(student.toString());
+//			text.append("<br>");
+//		}
+//		return text.toString();
+		return "test";
 	}
 }
