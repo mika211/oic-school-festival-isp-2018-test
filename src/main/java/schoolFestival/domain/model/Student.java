@@ -20,7 +20,7 @@ public class Student implements Serializable {
 
 	/** 出席番号 */
 	@Id
-	private Integer studentId;
+	private Integer id;
 
 	/** 名前 */
 	private String name;

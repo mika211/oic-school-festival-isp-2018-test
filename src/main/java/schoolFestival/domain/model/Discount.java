@@ -25,7 +25,7 @@ public class Discount implements Serializable {
 	@Id
 	@SequenceGenerator(name = "t_discount_id_gen", sequenceName = "t_discount_id_seq")
 	@GeneratedValue(strategy = GenerationType.IDENTITY, generator = "t_discount_id_gen")
-	private Integer discountId;
+	private Integer id;
 
 	/** 値引き額 */
 	private Integer discount;

@@ -26,10 +26,10 @@ public class Product implements Serializable {
 	@Id
 	@SequenceGenerator(name = "t_product_id_gen", sequenceName = "t_product_id_seq")
 	@GeneratedValue(strategy = GenerationType.IDENTITY, generator = "t_product_id_gen")
-	private Integer productId;
+	private Integer id;
 
 	/** 商品名 */
-	private String productName;
+	private String name;
 
 	/** 値引き対象商品 一覧 */
 	@ManyToMany
