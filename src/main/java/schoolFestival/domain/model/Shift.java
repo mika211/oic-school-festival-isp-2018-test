@@ -14,11 +14,13 @@ import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
 import lombok.Data;
+import lombok.ToString;
 
 /**
  * 当番 Entity
  */
 @Data
+@ToString(exclude="student")
 @Entity
 @Table(name="t_shift")
 public class Shift implements Serializable {

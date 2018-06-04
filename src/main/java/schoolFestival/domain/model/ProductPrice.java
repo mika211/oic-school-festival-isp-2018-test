@@ -16,6 +16,7 @@ import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
 import lombok.Data;
+import lombok.ToString;
 
 /**
  * 商品価格 モデルクラス.
@@ -24,6 +25,7 @@ import lombok.Data;
  * @version $Id$
  */
 @Data
+@ToString(exclude= {"salesDetail", "product"})
 @Entity
 @Table(name="t_product_price")
 public class ProductPrice implements Serializable {

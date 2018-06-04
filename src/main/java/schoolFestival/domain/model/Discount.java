@@ -12,11 +12,13 @@ import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
 import lombok.Data;
+import lombok.ToString;
 
 /**
  * 値引き Entity
  */
 @Data
+@ToString(exclude="product")
 @Entity
 @Table(name="t_discount")
 public class Discount implements Serializable {
