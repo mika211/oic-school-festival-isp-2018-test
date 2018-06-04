@@ -25,7 +25,7 @@ import lombok.ToString;
  * @version $Id$
  */
 @Data
-@ToString(exclude= {"salesDetail", "product"})
+@ToString(exclude= {"salesDetailSet", "product"})
 @Entity
 @Table(name="t_product_price")
 public class ProductPrice implements Serializable {

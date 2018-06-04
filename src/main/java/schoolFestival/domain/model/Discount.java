@@ -18,7 +18,7 @@ import lombok.ToString;
  * 値引き Entity
  */
 @Data
-@ToString(exclude="product")
+@ToString(exclude="productSet")
 @Entity
 @Table(name="t_discount")
 public class Discount implements Serializable {
