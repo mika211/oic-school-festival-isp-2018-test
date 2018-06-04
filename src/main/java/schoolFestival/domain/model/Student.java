@@ -26,7 +26,7 @@ public class Student implements Serializable {
 	private String name;
 
 	/** 当番 一覧 */
-	@OneToMany(mappedBy="student")
+//	@OneToMany(mappedBy="student")
 	private Set<Shift> shiftSet;
 
 }
