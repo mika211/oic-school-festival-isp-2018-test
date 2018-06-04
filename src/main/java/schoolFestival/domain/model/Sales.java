@@ -5,6 +5,7 @@ import java.util.Date;
 import java.util.Set;
 
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -38,7 +39,7 @@ public class Sales implements Serializable {
 	private Integer discountId;
 
 	/** 売上明細 一覧 */
-	@OneToMany(mappedBy="sales")
+	@OneToMany(mappedBy="sales", fetch = FetchType.EAGER)
 	private Set<SalesDetail> salesDetailSet;
 	
 }

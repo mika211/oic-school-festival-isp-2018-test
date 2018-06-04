@@ -4,6 +4,7 @@ import java.io.Serializable;
 import java.util.Set;
 
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -36,7 +37,7 @@ public class Product implements Serializable {
 	private Set<Discount> discountSet;
 
 	/** 商品価格 一覧 */
-	@OneToMany(mappedBy="product")
+	@OneToMany(mappedBy="product", fetch = FetchType.EAGER)
 	private Set<ProductPrice> productPriceSet;
 
 }

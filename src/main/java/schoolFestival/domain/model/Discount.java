@@ -4,6 +4,7 @@ import java.io.Serializable;
 import java.util.Set;
 
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -33,7 +34,7 @@ public class Discount implements Serializable {
 	private Integer discount;
 
 	/** 値引き対象商品 一覧 */
-	@ManyToMany(mappedBy="discountSet")
+	@ManyToMany(mappedBy="discountSet", fetch = FetchType.EAGER)
 	private Set<Product> productSet;
 
 }
