@@ -24,6 +24,7 @@ public class TestController {
 			s.append(student.toString());
 			s.append("<br>");
 		}
-		return s.toString();
+		System.out.println(s.toString());
+		return "test----------------------------------------";
 	}
 }
