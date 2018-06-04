@@ -1,5 +1,6 @@
 package schoolFestival.domain.model;
 
+import java.io.Serializable;
 import java.util.Date;
 
 import javax.persistence.Entity;
@@ -20,7 +21,7 @@ import lombok.Data;
 @Data
 @Entity
 @Table(name="t_shift")
-public class Shift {
+public class Shift implements Serializable {
 
 	/** 当番ID */
 	@Id

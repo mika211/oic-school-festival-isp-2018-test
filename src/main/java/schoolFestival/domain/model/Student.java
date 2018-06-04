@@ -1,5 +1,6 @@
 package schoolFestival.domain.model;
 
+import java.io.Serializable;
 import java.util.Set;
 
 import javax.persistence.Entity;
@@ -15,7 +16,7 @@ import lombok.Data;
 @Data
 @Entity
 @Table(name="t_student")
-public class Student {
+public class Student implements Serializable {
 
 	/** 出席番号 */
 	@Id

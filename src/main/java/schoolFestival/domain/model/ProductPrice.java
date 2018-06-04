@@ -28,9 +28,6 @@ import lombok.Data;
 @Table(name="t_product_price")
 public class ProductPrice implements Serializable {
 
-	/** serialVersionUID */
-	private static final long serialVersionUID = 1L;
-
 	/** 商品価格ID */
 	@Id
 	@SequenceGenerator(name = "t_product_price_id_gen", sequenceName = "t_product_price_id_seq")

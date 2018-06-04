@@ -1,5 +1,6 @@
 package schoolFestival.domain.model;
 
+import java.io.Serializable;
 import java.util.Date;
 import java.util.Set;
 
@@ -21,7 +22,7 @@ import lombok.Data;
 @Data
 @Entity
 @Table(name="t_sales")
-public class Sales {
+public class Sales implements Serializable {
 
 	/** 売上ID */
 	@Id
