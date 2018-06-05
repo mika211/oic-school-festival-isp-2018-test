@@ -1,4 +1,4 @@
-package cash_register;
+package schoolFestival;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

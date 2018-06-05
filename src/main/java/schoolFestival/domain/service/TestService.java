@@ -12,7 +12,6 @@ import schoolFestival.domain.repository.ShiftRepository;
 import schoolFestival.domain.repository.StudentRepository;
 
 @Service
-@DataJpaTest
 public class TestService {
 	
 	@Autowired
