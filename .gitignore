@@ -1,7 +1,7 @@
 .gradle
 /build/
-/db/
 /bin/
+/db/
 
 # Ignore Gradle GUI config
 gradle-app.setting

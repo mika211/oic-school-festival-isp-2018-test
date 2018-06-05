@@ -32,12 +32,4 @@ public class Product implements Serializable {
 	/** 商品名 */
 	private String name;
 
-	/** 値引き対象商品 一覧 */
-	@ManyToMany
-	private Set<Discount> discountSet;
-
-	/** 商品価格 一覧 */
-	@OneToMany(mappedBy="product", fetch = FetchType.EAGER)
-	private Set<ProductPrice> productPriceSet;
-
 }

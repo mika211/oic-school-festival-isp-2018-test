@@ -35,11 +35,7 @@ public class Sales implements Serializable {
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date datetime;
 
-	/** 値引きID */
-	private Integer discountId;
-
-	/** 売上明細 一覧 */
-	@OneToMany(mappedBy="sales", fetch = FetchType.EAGER)
-	private Set<SalesDetail> salesDetailSet;
+	/** 値引き額 */
+	private Integer discount;
 	
 }

@@ -14,7 +14,6 @@ import lombok.ToString;
  * 売上明細 Entity
  */
 @Data
-@ToString(exclude="sales")
 @Entity
 @Table(name="t_sales_detail")
 public class SalesDetail implements Serializable {
