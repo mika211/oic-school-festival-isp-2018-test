@@ -24,7 +24,6 @@ import lombok.ToString;
  * 当番 Entity
  */
 @Data
-@ToString(exclude="student")
 @Entity
 @Table(name="t_shift")
 public class Shift implements Serializable {

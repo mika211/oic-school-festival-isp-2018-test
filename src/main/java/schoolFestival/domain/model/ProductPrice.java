@@ -23,7 +23,6 @@ import lombok.ToString;
  * 商品価格 Entity
  */
 @Data
-@ToString(exclude="product")
 @Entity
 @Table(name="t_product_price")
 public class ProductPrice implements Serializable {
