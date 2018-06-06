@@ -16,6 +16,7 @@ public class TestService {
 	
 	@Autowired
 	StudentRepository studentRepository;
+	@Autowired
 	ShiftRepository shiftRepository;
 
 	public List<Student> findAllStudent() {
