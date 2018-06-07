@@ -38,4 +38,15 @@ public class Sales implements Serializable {
 	/** 値引き額 */
 	private Integer discount;
 	
+	/** 金額(値引き済) 集計結果 */
+	private Integer amount;
+
+	public Sales(Integer id, Date datetime, Integer discount, Integer amount) {
+		super();
+		this.id = id;
+		this.datetime = datetime;
+		this.discount = discount;
+		this.amount = amount;
+	}
+	
 }

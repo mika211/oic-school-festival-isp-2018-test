@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 import schoolFestival.domain.model.ProductPrice;
 import schoolFestival.domain.model.Shift;
 import schoolFestival.domain.model.Student;
+import schoolFestival.domain.model.TestModel;
 import schoolFestival.domain.service.TestService;
 
 @RestController
@@ -20,9 +21,9 @@ public class TestController {
 	
 	@RequestMapping
 	public String test() {
-		List<ProductPrice> list = testService.findAll();
+		List<TestModel> list = testService.findAll();
 		StringBuilder s = new StringBuilder();
-		for (ProductPrice value : list) {
+		for (TestModel value : list) {
 			s.append(value.toString());
 			s.append("<br>");
 		}
