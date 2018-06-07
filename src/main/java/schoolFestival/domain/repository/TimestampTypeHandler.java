@@ -8,9 +8,11 @@ import java.sql.Timestamp;
 
 import org.apache.ibatis.type.BaseTypeHandler;
 import org.apache.ibatis.type.MappedJdbcTypes;
+import org.apache.ibatis.type.MappedTypes;
 import org.apache.ibatis.type.JdbcType;
 import org.joda.time.LocalDateTime;
 
+@MappedTypes(LocalDateTime.class)
 @MappedJdbcTypes(JdbcType.TIMESTAMP)
 public class TimestampTypeHandler extends BaseTypeHandler<LocalDateTime> {
 
