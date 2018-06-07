@@ -9,6 +9,6 @@ public class TestModel {
 
 	private LocalDateTime datetime;
 	
-	private String name;
+	private int amount;
 	
 }
