@@ -4,7 +4,7 @@
 <configuration>
 
     <typeHandlers>
-        <package name="schoolFestival.domain.repository.TimestampTypeHandler" />
+        <typeHandler handler="schoolFestival.domain.repository.TimestampTypeHandler" />
     </typeHandlers>
 
 </configuration>
