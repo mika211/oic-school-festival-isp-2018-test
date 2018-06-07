@@ -16,7 +16,7 @@ public interface TestRepository {
 			+ " FROM t_sales s"
 			+ " JOIN t_sales_detail sd ON s.id = sd.sales_id"
 			+ " JOIN t_product_price pp ON sd.product_price_id = pp.id"
-			+ " GROUP BY s.datetime"
+			+ " GROUP BY s.datetime, s.discount"
 			)
 	List<TestModel> select();
 	
