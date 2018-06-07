@@ -11,7 +11,7 @@ import schoolFestival.domain.model.TestModel;
 public interface TestRepository {
 
 	@Select(
-			"SELECT date_trunc('hour', w.datetime), SUM(amount)"
+			"SELECT date_trunc('hour', w.datetime) AS datetime, SUM(w.amount) AS amount"
 			+ " FROM ("
 			+ "SELECT"
 			+ " s.datetime, (SUM(pp.price * sd.qty) - s.discount) AS amount"
