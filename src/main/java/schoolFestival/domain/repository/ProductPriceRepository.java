@@ -11,7 +11,7 @@ import schoolFestival.domain.model.ProductPrice;
 public interface ProductPriceRepository extends JpaRepository<ProductPrice, Integer> {
 
 	@Override
-	@Query(value="select * from t_product_price pr join t_product p on pr.product_id = p.id", nativeQuery=true)
+	@Query("from ProductPrice pr join fetch pr.priduct")
 	List<ProductPrice> findAll();
 	
 }
