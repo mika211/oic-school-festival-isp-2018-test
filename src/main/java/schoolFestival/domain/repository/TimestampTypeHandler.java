@@ -11,7 +11,7 @@ import org.apache.ibatis.type.MappedJdbcTypes;
 import org.apache.ibatis.type.JdbcType;
 import org.joda.time.LocalDateTime;
 
-//@MappedJdbcTypes(JdbcType.TIMESTAMP)
+@MappedJdbcTypes(JdbcType.TIMESTAMP)
 public class TimestampTypeHandler extends BaseTypeHandler<LocalDateTime> {
 
 	@Override
@@ -31,14 +31,22 @@ public class TimestampTypeHandler extends BaseTypeHandler<LocalDateTime> {
 
 	@Override
 	public LocalDateTime getNullableResult(ResultSet rs, int columnIndex) throws SQLException {
-		// TODO Auto-generated method stub
-		return null;
+		Timestamp timestamp = rs.getTimestamp(columnIndex);
+        if (timestamp == null) {
+            return null;
+        } else {
+            return LocalDateTime.parse(timestamp.toString());
+        }
 	}
 
 	@Override
 	public LocalDateTime getNullableResult(CallableStatement cs, int columnIndex) throws SQLException {
-		// TODO Auto-generated method stub
-		return null;
+		Timestamp timestamp = cs.getTimestamp(columnIndex);
+        if (timestamp == null) {
+            return null;
+        } else {
+            return LocalDateTime.parse(timestamp.toString());
+        }
 	}
 
 }
