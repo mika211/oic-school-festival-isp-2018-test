@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import schoolFestival.domain.model.ProductPrice;
 import schoolFestival.domain.model.Shift;
 import schoolFestival.domain.model.Student;
 import schoolFestival.domain.service.TestService;
@@ -19,10 +20,10 @@ public class TestController {
 	
 	@RequestMapping
 	public String test() {
-		List<Shift> list = testService.findAllShift();
+		List<ProductPrice> list = testService.findAll();
 		StringBuilder s = new StringBuilder();
-		for (Shift shift : list) {
-			s.append(shift.toString());
+		for (ProductPrice value : list) {
+			s.append(value.toString());
 			s.append("<br>");
 		}
 		return s.toString();
