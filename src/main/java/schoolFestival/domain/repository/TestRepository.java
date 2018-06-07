@@ -14,7 +14,7 @@ public interface TestRepository {
 			"select date_trunc('hour', w.datetime) as date, sum(w.amount) as amount"
 			+ " from ("
 			+ "select"
-			+ " s.sales_at, (sum(pp.price * sd.qty) - s.discount) as amount"
+			+ " s.sales_at, (sum(p.price * sd.qty) - s.discount) as amount"
 			+ " from sales s"
 			+ " join sales_detail sd on s.id = sd.sales_id"
 			+ " join product p on sd.product_id = p.id"
