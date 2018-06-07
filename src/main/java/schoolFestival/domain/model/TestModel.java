@@ -1,13 +1,13 @@
 package schoolFestival.domain.model;
 
-import org.joda.time.LocalDateTime;
+import java.util.Date;
 
 import lombok.ToString;
 
 @ToString
 public class TestModel {
 
-	private LocalDateTime datetime;
+	private Date datetime;
 	
 	private int amount;
 	

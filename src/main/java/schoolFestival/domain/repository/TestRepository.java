@@ -3,8 +3,6 @@ package schoolFestival.domain.repository;
 import java.util.List;
 
 import org.apache.ibatis.annotations.Mapper;
-import org.apache.ibatis.annotations.Result;
-import org.apache.ibatis.annotations.Results;
 import org.apache.ibatis.annotations.Select;
 
 import schoolFestival.domain.model.TestModel;
@@ -20,7 +18,6 @@ public interface TestRepository {
 			+ " JOIN t_product_price pp ON sd.product_price_id = pp.id"
 			+ " GROUP BY s.datetime, s.discount"
 			)
-	@Results(@Result(typeHandler=TimestampTypeHandler.class))
 	List<TestModel> select();
 	
 }
