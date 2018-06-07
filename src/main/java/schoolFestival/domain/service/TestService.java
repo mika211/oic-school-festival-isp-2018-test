@@ -19,7 +19,7 @@ public class TestService {
 	ProductPriceRepository productPriceRepository;
 	
 	public List<ProductPrice> findAll() {
-		return productPriceRepository.findAll();
+		return productPriceRepository.findAlltest();
 	}
 	
 }
