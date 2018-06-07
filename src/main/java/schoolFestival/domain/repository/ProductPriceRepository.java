@@ -10,7 +10,8 @@ import schoolFestival.domain.model.ProductPrice;
 
 public interface ProductPriceRepository extends JpaRepository<ProductPrice, Integer> {
 
+	@Override
 	@Query("from ProductPrice pr join fetch pr.product")
-	List<ProductPrice> findAlltest();
+	List<ProductPrice> findAll();
 	
 }
