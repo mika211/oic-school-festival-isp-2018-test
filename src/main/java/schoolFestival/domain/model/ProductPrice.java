@@ -34,7 +34,7 @@ public class ProductPrice implements Serializable {
 	private Integer id;
 
 	/** 商品 */
-//	@ManyToOne
+	@ManyToOne
 	private Product product;
 
 	/** 価格 */
