@@ -7,7 +7,7 @@ import lombok.ToString;
 @ToString
 public class TestModel {
 
-	private Date datetime;
+	private Date date;
 	
 	private int amount;
 	

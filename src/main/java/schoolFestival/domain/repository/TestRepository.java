@@ -11,17 +11,17 @@ import schoolFestival.domain.model.TestModel;
 public interface TestRepository {
 
 	@Select(
-			"SELECT date_trunc('hour', w.datetime) AS datetime, SUM(w.amount) AS amount"
-			+ " FROM ("
-			+ "SELECT"
-			+ " s.datetime, (SUM(pp.price * sd.qty) - s.discount) AS amount"
-			+ " FROM t_sales s"
-			+ " JOIN t_sales_detail sd ON s.id = sd.sales_id"
-			+ " JOIN t_product_price pp ON sd.product_price_id = pp.id"
-			+ " GROUP BY s.datetime, s.discount"
+			"select date_trunc('hour', w.datetime) as date, sum(w.amount) as amount"
+			+ " from ("
+			+ "select"
+			+ " s.sales_at, (sum(pp.price * sd.qty) - s.discount) as amount"
+			+ " from sales s"
+			+ " join sales_detail sd on s.id = sd.sales_id"
+			+ " join product p on sd.product_id = p.id"
+			+ " group by s.sales_at, s.discount"
 			+ ") w"
-			+ " GROUP BY 1"
-			+ " ORDER BY 1"
+			+ " group by 1"
+			+ " order by 1"
 			)
 	List<TestModel> select();
 	
