@@ -6,9 +6,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import schoolFestival.domain.model.ProductPrice;
-import schoolFestival.domain.model.Shift;
-import schoolFestival.domain.model.Student;
 import schoolFestival.domain.model.TestModel;
 import schoolFestival.domain.service.TestService;
 

@@ -1,23 +1,12 @@
 package schoolFestival.domain.model;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import lombok.ToString;
 
-import lombok.Data;
-
-@Entity
-@Data
+@ToString
 public class TestModel {
 
-	@Id
-	private Integer hours;
+	private int id;
 	
-	private Integer amount;
-
-	public TestModel(int hours, int amount) {
-		super();
-		this.hours = hours;
-		this.amount = amount;
-	}
+	private String name;
 	
 }
