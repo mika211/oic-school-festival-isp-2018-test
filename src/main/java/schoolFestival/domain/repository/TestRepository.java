@@ -11,7 +11,7 @@ import schoolFestival.domain.model.TestModel;
 @Mapper
 public interface TestRepository {
 
-	@Select("select s.id, sd.id as detail_id, s.sales_at, sd.product_id, s.discount, sd.qty from sales s join sales_detail sd on s.id = sd.sales_id")
+	@Select("select s.id, sd.id as detailId, s.sales_at as salesAt, s.discount, sd.product_id as productId, sd.price, sd.qty from sales s join sales_detail sd on s.id = sd.sales_id")
 	List<TestModel> findAll();
 	
 	@Select("select currval('sales_id_seq')")
