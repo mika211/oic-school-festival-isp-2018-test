@@ -26,16 +26,7 @@ public class TestModel {
 		this.qty = qty;
 	}
 
-	public TestModel(int id, int detailId, Date salesAt, int discount, int productId, int price, int qty) {
-		super();
-		this.id = id;
-		this.detailId = detailId;
-		this.salesAt = salesAt;
-		this.discount = discount;
-		this.productId = productId;
-		this.price = price;
-		this.qty = qty;
-	}
+	public TestModel() {}
 	
 //	private int id;
 //	private Date salesAt;
