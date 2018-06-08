@@ -11,13 +11,12 @@ import schoolFestival.domain.model.TestModel;
 import schoolFestival.domain.service.TestService;
 
 @RestController
-@RequestMapping("/")
 public class TestController {
 
 	@Autowired
 	TestService testService;
 	
-	@RequestMapping
+	@RequestMapping("/")
 	public String test() {
 		List<TestModel> list = testService.findAll();
 		StringBuilder s = new StringBuilder();
