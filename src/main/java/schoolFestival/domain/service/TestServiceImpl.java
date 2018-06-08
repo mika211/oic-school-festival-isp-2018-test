@@ -19,6 +19,9 @@ public class TestServiceImpl implements TestService {
 		return testRepository.select();
 	}
 
-	
-	
+	@Override
+	public void insert(TestModel testModel) {
+		testRepository.insert(testModel);
+	}
+
 }

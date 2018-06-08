@@ -8,4 +8,6 @@ public interface TestService {
 
 	List<TestModel> findAll();
 	
+	void insert(TestModel testModel);
+	
 }

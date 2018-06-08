@@ -1,14 +1,19 @@
 package schoolFestival.domain.model;
 
-import java.util.Date;
-
 import lombok.ToString;
 
 @ToString
 public class TestModel {
-
-	private Date date;
 	
-	private int amount;
+	private int id;
+
+	private String name;
+	
+	private int price;
+
+	public TestModel(String name, String price) {
+		this.name = name;
+		this.price = Integer.parseInt(price);
+	}
 	
 }
