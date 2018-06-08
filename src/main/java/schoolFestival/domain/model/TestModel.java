@@ -15,5 +15,11 @@ public class TestModel {
 		this.name = name;
 		this.price = Integer.parseInt(price);
 	}
+
+	public TestModel(int id, String name, int price) {
+		this.id = id;
+		this.name = name;
+		this.price = price;
+	}
 	
 }
