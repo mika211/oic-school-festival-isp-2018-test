@@ -11,10 +11,16 @@ import schoolFestival.domain.model.TestModel;
 @Mapper
 public interface TestRepository {
 
-	@Select("select id, name, price from product")
-	List<TestModel> select();
+	@Select("select s.id, sd.id as detail_id, s.sales_at, sd.product_id, s.discount, sd.qty from sales s join sales_detail sd on s.id = sd.sales_id")
+	List<TestModel> findAll();
 	
-	@Insert("insert into product (name, price) values (#{name}, #{price})")
-	void insert(TestModel testModel);
+	@Select("select currval('sales_id_seq')")
+	int currval();
+	
+	@Insert("insert into sales (discount) values #{discount}")
+	void createSales(TestModel testModel);
+	
+	@Insert("insert into sales_detail (sales_id, product_id, price, qty) values (#{id}, #{productId}, #{price}, #{qty})")
+	void createSalesDetail(TestModel testModel);
 	
 }

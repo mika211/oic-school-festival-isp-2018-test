@@ -1,5 +1,6 @@
 package schoolFestival.app.controller;
 
+import java.util.Date;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,12 +12,13 @@ import schoolFestival.domain.model.TestModel;
 import schoolFestival.domain.service.TestService;
 
 @RestController
+@RequestMapping("/")
 public class TestController {
 
 	@Autowired
 	TestService testService;
-	
-	@RequestMapping("/")
+
+	@RequestMapping
 	public String test() {
 		List<TestModel> list = testService.findAll();
 		StringBuilder s = new StringBuilder();
@@ -26,10 +28,18 @@ public class TestController {
 		}
 		return s.toString();
 	}
-	
-	@RequestMapping("/create")
-	public String create(@RequestParam("name") String name, @RequestParam("price") String price) {
-		TestModel testModel = new TestModel(name, price);
+
+	@RequestMapping(params="discount")
+	public String create(
+			@RequestParam("discount") String discount,
+			@RequestParam("productId") String productId,
+			@RequestParam("price") String price,
+			@RequestParam("qty") String qty) {
+		TestModel testModel = new TestModel(
+				Integer.parseInt(discount),
+				Integer.parseInt(productId),
+				Integer.parseInt(price),
+				Integer.parseInt(qty));
 		try {
 			testService.insert(testModel);
 		}catch(Exception e){
@@ -37,5 +47,5 @@ public class TestController {
 		}
 		return "OK";
 	}
-	
+
 }
