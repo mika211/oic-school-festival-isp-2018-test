@@ -2,6 +2,7 @@
 /build/
 /bin/
 /db/
+application-local.yml
 
 # Ignore Gradle GUI config
 gradle-app.setting
